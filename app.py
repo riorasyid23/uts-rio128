@@ -60,12 +60,8 @@ def predict():
 
     print(decode_predictions(prediction))
 
-    a=decode_predictions(prediction)
-
-    b=a[0][0]
-
-    top_label =[(b[1],str(b[2]))]
-
+    p = decode_predictions(prediction)[0][0]
+    top_label = [p[1], str(p[2])]
     #top_label = [(i[1],str(i[2])) for i in decode_predictions(prediction)[0][0]]
 
     print(top_label)
